@@ -62,7 +62,7 @@ void searchStudent(ifstream& file, const string& name) {
     transform(upperSearchName.begin(), upperSearchName.end(), upperSearchName.begin(), ::toupper);
 
     // Check if student name matches the search name
-    if (upperName == upperSearchName) {
+    if (upperName.find(upperSearchName) != string::npos) {
       cout << "Student found!" << endl;
       cout << "Name: " << studentName << endl;
       cout << "Age: " << age << endl;
